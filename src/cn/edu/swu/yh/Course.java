@@ -20,9 +20,9 @@ public class Course {
     public String getTeacher(){ return teacher;}
 
     public void showInfo() {
-        System.out.println("课程编号：" + courseId);
-        System.out.println("课程名称：" + courseName);
-        System.out.println("任课教师：" + teacher);
+        System.out.println("课程编号：" + getCourseId());
+        System.out.println("课程名称：" + getCourseName());
+        System.out.println("任课教师：" + getTeacher());
         System.out.println("-----------------");
     }
 }

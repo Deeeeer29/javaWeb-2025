@@ -12,6 +12,7 @@ public class main {
         s1.showInfo();
         s2.showInfo();
 
+
         System.out.println("\n--- 课程信息 ---");
         c1.showInfo();
         c2.showInfo();

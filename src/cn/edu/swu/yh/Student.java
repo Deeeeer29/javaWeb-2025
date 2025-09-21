@@ -15,9 +15,7 @@ public class Student {
     }
 
     // Getter methods
-    public String getId() {
-        return id;
-    }
+    public String getId() { return id;}
 
     public String getName() {
         return name;
@@ -49,10 +47,11 @@ public class Student {
     }
 
     public void showInfo() {
-        System.out.println("学号：" + id);
-        System.out.println("姓名：" + name);
-        System.out.println("性别：" + gender);
-        System.out.println("年龄：" + age);
+        System.out.println("学号：" + getId());
+        System.out.println("姓名：" + getName());
+        System.out.println("性别：" + getGender());
+        System.out.println("年龄：" + getAge());
         System.out.println("-----------------");
     }
+
     }
