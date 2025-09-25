@@ -23,12 +23,18 @@ public class FileUtils {
     public static void ensureDirectoryExists(String dirPath) {
         File dir = new File(dirPath);
         if (!dir.exists()) {
-            dir.mkdirs();
+            dir.mkdirs();  // 确保目录存在
         }
     }
 
     public static void appendLog(String log) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("io\\download_log.txt", true))) {
+        // 确保日志文件所在的目录存在
+        ensureDirectoryExists("io");
+
+        // 使用标准的路径分隔符
+        String logFilePath = "io" + File.separator + "download_log.txt";
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(logFilePath, true))) {
             writer.write(new Date() + " " + log);
             writer.newLine();
         } catch (IOException e) {
@@ -36,4 +42,6 @@ public class FileUtils {
         }
     }
 }
+
+
 
